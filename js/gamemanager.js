@@ -19,7 +19,7 @@ let GameManager = {
         break;
     }
     let getInterface = document.querySelector(".interface");
-    getInterface.innerHTML = '<img src="images/' + classType.toLowerCase() + '.png" class="img-avatar"><div><h3>' + classType + '</h3><p>Health: ' + player.health + '</p><p>Mana: ' + player.mana + '</p><p>Strength: ' + player.strength + '</p><p>Agility: ' + player.agility + '</p><p>Speed: ' + player.speed + '</p></div>'; 
+    getInterface.innerHTML = '<img src="images/' + classType.toLowerCase() + '.png" class="img-avatar"><div><h3>' + classType + '</h3><p class="health-player">Health: ' + player.health + '</p><p>Mana: ' + player.mana + '</p><p>Strength: ' + player.strength + '</p><p>Agility: ' + player.agility + '</p><p>Speed: ' + player.speed + '</p></div>'; 
   },
   setPreFight: function() {
     let getHeader = document.querySelector(".header");
@@ -38,7 +38,7 @@ let GameManager = {
     let enemy00 = new Enemy("Troll", 100, 0 , 50, 100, 100); 
     let enemy01 = new Enemy("Fighter", 200, 0 , 150, 80, 150); 
     let chooseRandomEnemy = Math.floor(Math.random() * Math.floor(2));
-    switch (chooseRandomEnemy) {
+    switch (chooseRandomEnemy) {   
       case 0:
         enemy = enemy00;
         break;
